@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CF391ADB1D84B7BB002D63FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF391ADA1D84B7BB002D63FF /* AppDelegate.swift */; };
-		CF391AE01D84B7BB002D63FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF391ADE1D84B7BB002D63FF /* Main.storyboard */; };
 		CF391AE21D84B7BB002D63FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF391AE11D84B7BB002D63FF /* Assets.xcassets */; };
 		CF391AE51D84B7BB002D63FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF391AE31D84B7BB002D63FF /* LaunchScreen.storyboard */; };
 		CF391AEF1D84B833002D63FF /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF391AEE1D84B833002D63FF /* Weather.swift */; };
 		CF391AF11D84B856002D63FF /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF391AF01D84B856002D63FF /* WeatherViewController.swift */; };
+		CFBDB95C1D84D24B00C303EF /* Main.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CFBDB95B1D84D24B00C303EF /* Main.Storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CF391AD71D84B7BB002D63FF /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF391ADA1D84B7BB002D63FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CF391ADF1D84B7BB002D63FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF391AE11D84B7BB002D63FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF391AE41D84B7BB002D63FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF391AE61D84B7BB002D63FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF391AEE1D84B833002D63FF /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		CF391AF01D84B856002D63FF /* WeatherViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		CFBDB95B1D84D24B00C303EF /* Main.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.Storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 				CF391AEE1D84B833002D63FF /* Weather.swift */,
 				CF391AF01D84B856002D63FF /* WeatherViewController.swift */,
 				CF391ADA1D84B7BB002D63FF /* AppDelegate.swift */,
-				CF391ADE1D84B7BB002D63FF /* Main.storyboard */,
+				CFBDB95B1D84D24B00C303EF /* Main.Storyboard */,
 				CF391AE11D84B7BB002D63FF /* Assets.xcassets */,
 				CF391AE31D84B7BB002D63FF /* LaunchScreen.storyboard */,
 				CF391AE61D84B7BB002D63FF /* Info.plist */,
@@ -127,7 +127,7 @@
 			files = (
 				CF391AE51D84B7BB002D63FF /* LaunchScreen.storyboard in Resources */,
 				CF391AE21D84B7BB002D63FF /* Assets.xcassets in Resources */,
-				CF391AE01D84B7BB002D63FF /* Main.storyboard in Resources */,
+				CFBDB95C1D84D24B00C303EF /* Main.Storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CF391ADE1D84B7BB002D63FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF391ADF1D84B7BB002D63FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF391AE31D84B7BB002D63FF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -290,6 +282,7 @@
 				CF391AEB1D84B7BB002D63FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
