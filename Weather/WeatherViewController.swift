@@ -34,8 +34,17 @@ class WeatherViewController: UIViewController {
     }
     
     @IBAction func doneButtonTapped(sender: UIBarButtonItem) {
-        switchToWeatherView()
-        searchTextField.resignFirstResponder()
+        let searchTerm = searchTextField.text ?? ""
+        WeatherController.fetchWeather(searchTerm) { (weather) in
+            guard let weather = weather else { return }
+            dispatch_async(dispatch_get_main_queue(), { 
+                self.cityLabel.text = weather.name
+                let temperatureF = round(((weather.main["temp"]! - 273.15) * (9.0/5.0)) + 32.0)
+                self.descriptionLabel.text = "\(temperatureF) degrees"
+                self.switchToWeatherView()
+                self.searchTextField.resignFirstResponder()
+            })
+        }
     }
 
     func switchToSearchView() {

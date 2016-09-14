@@ -14,27 +14,26 @@ class Weather {
     let descrption: String
     let iconString: String
     let iconImage: UIImage?
+    let name: String
     
-    lazy var temperatureF = {(temperatureK) in
-        return (temperatureK - 32.0) * (5.0/9.0)
-    }
-    
-    init(main: [String: Double], description: String, iconString: String) {
+    init(main: [String: Double], description: String, iconString: String, name: String) {
         self.main = main
         self.descrption = description
         self.iconString = iconString
         self.iconImage = nil
+        self.name = name
     }
     
     convenience init?(dictionary: [String: AnyObject]) {
         
         guard let mainFromDict = dictionary["main"] as? [String: Double],
-            weather = dictionary["weather"] as? [String: AnyObject],
-            desctriptionFromDict = weather["description"] as? String,
-            iconStringFromDict = weather["icon"] as? String else {
+            name = dictionary["name"] as? String,
+        weather = dictionary["weather"] as? [[String: AnyObject]],
+            desctriptionFromDict = weather[0]["description"] as? String,
+            iconStringFromDict = weather[0]["icon"] as? String else {
             return nil
         }
         
-        self.init(main: mainFromDict, description: desctriptionFromDict, iconString: iconStringFromDict)
+        self.init(main: mainFromDict, description: desctriptionFromDict, iconString: iconStringFromDict, name: name)
     }
 }
