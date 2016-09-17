@@ -6,7 +6,7 @@
 //  Copyright © 2016 Wesley Austin. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 
 class WeatherController {
@@ -26,6 +26,20 @@ class WeatherController {
             
             let weather = Weather(dictionary: weatherJSON)
             completion(weather: weather) 
+        }
+    }
+    
+    static func imageFromURL(urlString: String, completion: (image: UIImage?) -> Void) {
+        let completeURLString = "http://openweathermap.org/img/w/" + urlString + ".png"
+        
+        NetworkController.dataAtURL(completeURLString) { (data) in
+            guard let data = data else {
+                completion(image: nil)
+                return
+            }
+            
+            let image = UIImage(data: data)
+            completion(image: image)
         }
     }
 }

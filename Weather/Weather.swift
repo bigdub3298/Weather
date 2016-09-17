@@ -13,7 +13,7 @@ class Weather {
     let main: [String: Double]
     let descrption: String
     let iconString: String
-    let iconImage: UIImage?
+    var iconImage: UIImage?
     let name: String
     
     init(main: [String: Double], description: String, iconString: String, name: String) {

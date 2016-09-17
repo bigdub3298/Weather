@@ -22,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter city name to get current weather" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ka9-x1-bFc">
                                 <rect key="frame" x="20" y="20" width="560" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lQV-XA-xDt">
@@ -33,7 +33,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWs-pp-Hmp">
                                 <rect key="frame" x="208" y="87" width="185" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EQM-33-u8c">
@@ -49,42 +49,37 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hON-9E-Wa4">
-                                <rect key="frame" x="256" y="301" width="88" height="150"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JIR-hD-jwn">
+                                <rect key="frame" x="251" y="301" width="98" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-9m-Glx">
+                                        <rect key="frame" x="0.0" y="0.0" width="98" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhq-wy-fum">
+                                        <rect key="frame" x="0.0" y="75" width="98" height="75"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="2vD-lP-2XX"/>
-                                    <constraint firstAttribute="width" constant="70" id="I2s-73-vAa"/>
+                                    <constraint firstAttribute="height" constant="150" id="8wu-h8-ajM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="I2s-73-vAa"/>
-                                    </mask>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlX-gG-z0R">
-                                <rect key="frame" x="272" y="553" width="56" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Reset"/>
-                                <connections>
-                                    <action selector="resetButtonTapped:" destination="DaM-V0-yr7" eventType="touchUpInside" id="Mgh-3k-0fx"/>
-                                </connections>
-                            </button>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lQV-XA-xDt" firstAttribute="centerX" secondItem="Dwq-eL-xij" secondAttribute="centerX" id="2YJ-tz-6Ys"/>
-                            <constraint firstItem="1XW-Nu-HIn" firstAttribute="top" secondItem="hlX-gG-z0R" secondAttribute="bottom" constant="8" id="4CC-cq-JJK"/>
-                            <constraint firstItem="hON-9E-Wa4" firstAttribute="top" secondItem="EQM-33-u8c" secondAttribute="bottom" constant="8" id="BVA-Vd-849"/>
+                            <constraint firstItem="JIR-hD-jwn" firstAttribute="top" secondItem="EQM-33-u8c" secondAttribute="bottom" constant="8" id="2rd-m7-8gO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ka9-x1-bFc" secondAttribute="trailing" id="Fdn-pY-1ZI"/>
                             <constraint firstItem="Ka9-x1-bFc" firstAttribute="centerX" secondItem="Dwq-eL-xij" secondAttribute="centerX" id="Jhv-1q-fDM"/>
                             <constraint firstItem="VWs-pp-Hmp" firstAttribute="top" secondItem="lQV-XA-xDt" secondAttribute="bottom" constant="8" id="OSK-Om-x6i"/>
                             <constraint firstItem="EQM-33-u8c" firstAttribute="centerX" secondItem="Dwq-eL-xij" secondAttribute="centerX" id="Os0-k4-guk"/>
+                            <constraint firstItem="JIR-hD-jwn" firstAttribute="centerX" secondItem="Dwq-eL-xij" secondAttribute="centerX" id="QMi-oI-cF6"/>
                             <constraint firstItem="EQM-33-u8c" firstAttribute="top" secondItem="VWs-pp-Hmp" secondAttribute="bottom" constant="8" id="QxW-SW-1Ye"/>
-                            <constraint firstItem="hlX-gG-z0R" firstAttribute="centerX" secondItem="Dwq-eL-xij" secondAttribute="centerX" id="TGs-8m-QOL"/>
-                            <constraint firstItem="hON-9E-Wa4" firstAttribute="centerX" secondItem="Dwq-eL-xij" secondAttribute="centerX" id="fm0-oI-hBb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lQV-XA-xDt" secondAttribute="trailing" id="gcN-2I-q25"/>
                             <constraint firstItem="lQV-XA-xDt" firstAttribute="leading" secondItem="Dwq-eL-xij" secondAttribute="leadingMargin" id="h6C-IG-Xwj"/>
                             <constraint firstItem="lQV-XA-xDt" firstAttribute="top" secondItem="Ka9-x1-bFc" secondAttribute="bottom" constant="8" id="kUy-Sb-Y4W"/>
@@ -95,9 +90,10 @@
                     </view>
                     <connections>
                         <outlet property="cityLabel" destination="VWs-pp-Hmp" id="JpK-Oz-RYc"/>
-                        <outlet property="descriptionLabel" destination="hON-9E-Wa4" id="u2q-Zs-sNd"/>
+                        <outlet property="descriptionLabel" destination="vhq-wy-fum" id="qsd-zE-zre"/>
                         <outlet property="iconImageView" destination="EQM-33-u8c" id="aob-o1-Qqq"/>
                         <outlet property="searchTextField" destination="lQV-XA-xDt" id="K1t-nK-XeO"/>
+                        <outlet property="tempLabel" destination="jeh-9m-Glx" id="u6F-yq-q2g"/>
                         <outlet property="toolbar" destination="rX0-tf-U4S" id="C5V-eo-9Us"/>
                     </connections>
                 </viewController>
