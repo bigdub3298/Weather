@@ -41,7 +41,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     // MARK: - Actions 
     
     @IBAction func doneButtonTapped(sender: UIBarButtonItem) {
-        let searchTerm = searchTextField.text ?? ""
+        let searchTerm = searchTextField.text?.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) ?? ""
         WeatherController.fetchWeather(searchTerm) { (weather) in
             guard let weather = weather else { return }
             dispatch_async(dispatch_get_main_queue(), { 
